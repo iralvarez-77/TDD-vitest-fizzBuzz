@@ -1,20 +1,5 @@
 import { describe, expect, it } from 'vitest';
-
-const fizzBuzz = number => {
-  //aquí se refactoriza
-	// if ( typeof number !== 'number') throw new Error()
-	// if ( number === undefined ) throw new Error()
-	// if ( number < 0 ) throw new Error()
-	// if ( number === 0 ) throw new Error()
-	// if ( !number % 1 == 0 ) throw new Error()
-	if ( isNaN(number) || number < 0 || number === 0 || !Number.isInteger(number)) throw new Error()
-	if ( number % 15 === 0 ) return "fizzBuzz"
-	if ( number % 3 === 0 ) return "fizz"
-	if ( number % 5 === 0 ) return "buzz"
-
-	return number
-	
-};
+import { fizzBuzz } from './src/index'
 
 describe('fizzBuzz', () => {
 // 	//casos de pruebas
@@ -58,8 +43,8 @@ describe('fizzBuzz', () => {
 	});
 
 	it('My function should return fizzBuzz if a number multiple of 3 and 5 is passed to it', () => {
-		expect(fizzBuzz(15)).toBe("fizzBuzz");
-		expect(fizzBuzz(30)).toBe("fizzBuzz");
+		expect(fizzBuzz(15)).toBe("fizzbuzz");
+		expect(fizzBuzz(30)).toBe("fizzbuzz");
 	});
 
 	it('My function should return a number when the parameter is not a multliple of 3 or 5', () => {
