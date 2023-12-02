@@ -8,12 +8,9 @@ const fizzBuzz = number => {
 	// if ( number === 0 ) throw new Error()
 	// if ( !number % 1 == 0 ) throw new Error()
 	if ( isNaN(number) || number < 0 || number === 0 || !Number.isInteger(number)) throw new Error()
-
-	// if ( number === 15 ) return "fizzBuzz"
-	// if ( number === 30 ) return "fizzBuzz"
-	if ( number % 5  == 0  && number % 3 == 0) return "fizzBuzz"
-	if ( number % 3 == 0 ) return "fizz"
-	if ( number % 5 == 0 ) return "buzz"
+	if ( number % 15 === 0 ) return "fizzBuzz"
+	if ( number % 3 === 0 ) return "fizz"
+	if ( number % 5 === 0 ) return "buzz"
 
 	return number
 	
@@ -71,9 +68,3 @@ describe('fizzBuzz', () => {
 	});
 
 });
-
-
-// console.log(23.4 % 1 == 0);
-// console.log(isNaN(2.3));
-// console.log(Number.isNaN("jdhf"));
-// console.log(isInteger(2.3)); 
